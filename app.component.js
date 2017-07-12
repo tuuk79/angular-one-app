@@ -1,12 +1,15 @@
-function AppController(AppService) {
-    var vm = this;
+(function () {
+    angular
+        .module('app')
+        .component('appComponent', {
+            templateUrl: 'app.component.html',
+            controller: appController
+        });
 
-    vm.data = AppService;
-}
+    appController.$inject = ['appService'];
 
-angular
-    .module('app')
-    .component('appComponent', {
-        templateUrl: 'app.component.html',
-        controller: AppController
-    });
+    function appController(appService) {
+        this.test = appService.test();
+        this.hello = appService.hello();
+    }
+})();
