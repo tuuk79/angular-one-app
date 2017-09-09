@@ -15,10 +15,11 @@ module.exports = function (config) {
 		files: [
 			'node_modules/angular/angular.js',
 			'node_modules/angular-mocks/angular-mocks.js',
+			'steve.module.js',
 			'app.module.js',
+			'hello.service.js',	
 			'app.service.js',
-			'hello.service.js',
-			'*.spec.js'
+			'hello.service.spec.js'
 		],
 
 

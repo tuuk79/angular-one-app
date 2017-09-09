@@ -2,12 +2,11 @@ const express = require('express')
 const app = express()
 
 app.use(express.static(__dirname));
-app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.get('/', function (req, res) {
 	var options = {
 		root: __dirname,
-		dotfiles: 'deny',
+		dotfiles: 'allow',
 		headers: {
 			'x-timestamp': Date.now(),
 			'x-sent': true
