@@ -10,6 +10,7 @@ require('./app.service');
 require('./components/app/app');
 require('./components/home/home');
 require('./components/about/about');
+require('./components/premium/premium');
 
 function component() {
 	var element = document.createElement('div');
